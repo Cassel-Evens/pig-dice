@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset = "utf-8">
+    <script type="text/javascript" src="js/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Ana, Cassel and Jonathan's Pig Dice</title>
+  </head>
+  <body>
+    <div class = "pageHeader">
+      <h1>Ana, Cassel and Jonathan's Pig Dice</h1>
+    </div>
+    <div class = "container">
+      <div id = "rules">
+        <h2> Rules of the Game: </h2>
+        <ul>
+          <li>Players roll two six-side dice.</li>
+          <li>Unless either of the dice roll a <em>one</em>, the sum of the two dice is added to the total score.</li>
+          <li>If a single one is rolled, the player that rolled the die loses that turn's score and ends their turn.</li>
+          <li>However, if two ones are rolled, the turn ends, but adds the score (2) to their total score.</li>
+          <li>First player to reach a certain set number wins.</li>
+        </ul>
+        <div class = "button-div"><button class = "btn-success" id = "gameReset">Reset Your Score!</button></div> <br>
+      </div>
+      <div id="game-result">
+        <h2>The Winner of the Pig Dice is: <span></span></h2>
+      </div>
+      <div id = "start" class= "row">
+        <form id = "gameInit">
+          <div class = "col-md-6">
+            <label for = "player1">Player 1's Name</label>
+            <input type = "text" id = "player1Name"><br>
+            <label for = "player2">Player 2's Name</label>
+            <input type = "text" id = "player2Name"><br>
+            <label for= "score-to-win">Score to Win</label>
+            <input type= "number" id= "score-to-win" value= "">
+          </div>
+          <br>
+          <div class = "col-md-6">
+            <button class = "btn-failure" type = "submit" id = "start-game">Start a New Game!</button>
+          </div>
+        </form>
+        
+      </div>
+      <div id = "gameplay">
+        <div class = "row">
+          <div id = "player1" class = "col-sm-6">
+            <h4></h4>
+            <div class = "row die-img">
+              <div class= "col-xs-6">
+                <img class = "die-img1" src = 'img/1.jpg' alt = "picture of a die face">
+              </div>
+              <div class = "col-xs-6">
+                <img class = "die-img2" src = 'img/2.jpg' alt = "picture of a die face">
+              </div>
+            </div>
+            <p class = "rollScore">Current Rolls:</p>
+            <p class = "turnScore">Scored This Turn:</p>
+            <p class = "totalScore">Total Score: </p>
+            <button class="btn-roll1">Roll Dice</button><br>
+            <button class="btn-endTurn1">End Turn</button>
+          </div>
+
+          <div id="player2" class="col-sm-6">
+            <h3></h3>
+            <div class="row die-img">
+              <div class="col-xs-6">
+                <img class="die-img1" src='img/4.jpg' alt="picture of a die face">
+              </div>
+              <div class="col-xs-6">
+                <img class="die-img2" src='img/5.jpg' alt="picture of a die face">
+              </div>
+            </div>
+            <p class = "rollScore">Current Rolls:</p>
+            <p class = "turnScore">Scored This Turn:</p>
+            <p class="totalScore">Total Score: </p>
+            <button class="btn-roll2">Roll Dice</button><br>
+            <button class="btn-endTurn2">End Turn</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>
